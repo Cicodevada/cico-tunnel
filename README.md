@@ -25,7 +25,8 @@ Antes de começar, certifique-se de que você possui:
    Primeiro, clone o repositório do Cico Tunnel para o seu sistema:
    ```sh
    git clone https://github.com/hugosantoslisboa/cico-tunnel.git
-   cd cico-tunnel```
+   cd cico-tunnel
+   ```
    
 2. **Instale as Dependências**:
    Instale o Colorama usando pip:
@@ -38,7 +39,8 @@ Para usar o Cico Tunnel, siga estas etapas:
 1. **Clone o Repositório**:
    Execute o script principal, passando a porta local que deseja expor e a configuração SSH como argumentos:
    ```py main.py PORTA
-   Exemplo: py main.py 80```
+   Exemplo: py main.py 80
+   ```
    
 2. **Visualize a URL**:
    O Cico Tunnel exibirá a URL pública para o seu servidor local através do túnel SSH no terminal. Use essa URL para acessar seu servidor local de qualquer lugar na internet.
@@ -55,4 +57,4 @@ Sinta-se à vontade para contribuir com o projeto! Você pode fazer isso de vár
 
 - **Enviar Pull Requests**: Se você tem melhorias ou correções, envie um pull request para o repositório.
 
-- **Feedback**: Qualquer feedback é bem-vindo para ajudar a melhorar o CicoT unnel.
+- **Feedback**: Qualquer feedback é bem-vindo para ajudar a melhorar o Cico Tunnel.
