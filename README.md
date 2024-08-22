@@ -22,20 +22,42 @@ Antes de começar, certifique-se de que você possui:
 1. **Instale via pip**:
 
    ```bash
-   pip install cico-tunnel```
+   pip install cico-tunnel
+   ```
 
 ## Uso
 
 Para usar o Cico Tunnel, siga estas etapas:
 
-Execute o comando cicotunnel, passando a porta local que deseja expor:
+1. **Execute o comando `cicotunnel`, passando a porta local que deseja expor**:
+
    ```bash
    cicotunnel 80
    ```
-   Isso irá iniciar o Cico Tunnel e criar um túnel para a porta 80 do seu localhost.
+
+   Isso irá iniciar o Cico Tunnel e criar um túnel para a porta 80 do seu localhost. 
+   Se você quiser usar um servidor SSH diferente do padrão, use a flag `-r` ou `--remote` seguido do endereço do seu servidor. Por exemplo:
+
+   ```bash
+   cicotunnel 80 -r usuario@meu.servidor.com
+   ```
+
 2. **Visualize a URL**:
    O Cico Tunnel exibirá a URL pública para o seu servidor local através do túnel SSH no terminal. Use essa URL para acessar seu servidor local de qualquer lugar na internet.
 
+## Exemplos
+
+* Expor a porta do MySQL do localhost no cicotunnel:
+
+  ```bash
+  cicotunnel 3306
+  ```
+
+* Expor a porta do MySQL do localhost utilizando um servidor SSH específico:
+
+  ```bash
+  cicotunnel 3306 -r usuario@meu.servidor.com
+  ```
 
 
 ## Contribuindo
