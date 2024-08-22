@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="cico-tunnel",
-    version="1.1.3",
+    version="1.1.4",
     packages=find_packages(),
     install_requires=[
         "colorama",
