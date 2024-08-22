@@ -6,42 +6,33 @@ O **Cicotunnel** é uma ferramenta que utiliza SSH para expor portas locais para
 
 Antes de começar, certifique-se de que você possui:
 
-1. **Acesso SSH**: Você precisa de um servidor SSH ao qual você tenha acesso e permissão para criar túneis. (Pode usar o meu proprio servidor também caso queira algo rapido)
-
-1.1 **Caso queira usar o seu próprio servidor**, você precisa:
-   - Criar um usuário SSH.
-   - Permitir login sem senha.
-   - Permitir o forwarding e o gateway.
+1. **Acesso SSH**: Você precisa de um servidor SSH ao qual você tenha acesso e permissão para criar túneis. 
+   * Você pode usar seu próprio servidor, mas precisará:
+      - Criar um usuário SSH.
+      - Permitir login sem senha.
+      - Permitir o forwarding e o gateway.
+   * Ou você pode usar o servidor fornecido pelo Cico Tunnel para um acesso rápido.
    
 2. **Python**: Certifique-se de que o Python está instalado no seu sistema. Você pode baixar a versão mais recente do Python em [python.org](https://www.python.org/).
 
-3. **Colorama**: Uma biblioteca Python para cores no terminal. É necessária para a interface colorida do Cico Tunnel.
-
-4. **Acesso à Internet**: É necessário para criar o túnel SSH e acessar o servidor.
+3. **Acesso à Internet**: É necessário para criar o túnel SSH e acessar o servidor.
 
 ## Instalação
 
-1. **Clone o Repositório**:
-   Primeiro, clone o repositório do Cico Tunnel para o seu sistema:
-   ```sh
-   git clone https://github.com/hugosantoslisboa/cico-tunnel.git
-   cd cico-tunnel
-   ```
-   
-2. **Instale as Dependências**:
-   Instale o Colorama usando pip:
-   ```pip install colorama```
+1. **Instale via pip**:
+
+   ```bash
+   pip install cico-tunnel```
 
 ## Uso
 
 Para usar o Cico Tunnel, siga estas etapas:
 
-1. **Clone o Repositório**:
-   Execute o script principal, passando a porta local que deseja expor e a configuração SSH como argumentos:
-   ```py main.py PORTA
-   Exemplo: py main.py 80
+Execute o comando cicotunnel, passando a porta local que deseja expor:
+   ```bash
+   cicotunnel 80
    ```
-   
+   Isso irá iniciar o Cico Tunnel e criar um túnel para a porta 80 do seu localhost.
 2. **Visualize a URL**:
    O Cico Tunnel exibirá a URL pública para o seu servidor local através do túnel SSH no terminal. Use essa URL para acessar seu servidor local de qualquer lugar na internet.
 
