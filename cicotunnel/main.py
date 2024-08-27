@@ -2,6 +2,7 @@ import subprocess
 import signal
 import re
 import sys
+import requests
 from colorama import Fore, Style, init
 
 def main():
@@ -35,6 +36,8 @@ def main():
             break
 
     if porta_alocada:
+        url = f"http://ip-api.com/json/{server.split('@')[-1]}"
+        response = requests.get(url, verify=False)
         print(r"""
   ______            ______                   __
  / ___(_)______    /_  __/_ _____  ___  ___ / /
@@ -46,13 +49,22 @@ def main():
         url = "https://github.com/hugosantoslisboa"
 
         print(Fore.CYAN + "CicoTunnel" + Style.RESET_ALL + " by " + Fore.CYAN + f"\033]8;;{url}\033\\{link_text}\033]8;;\033\\".ljust(30)+ Style.RESET_ALL)
-        print("(CTRL + C to quit)")
         print("")
         print(Fore.GREEN + "Tunnel Status".ljust(30) + "Online" + Style.RESET_ALL)
-        print("Region".ljust(30) + "Brasil (BR)")
+        if response.status_code == 200:
+            data = response.json()
+            country = data.get('country')
+            countryCode = data.get('countryCode')
+            print("Region".ljust(30) + f"{country} ({countryCode})")
+        else:
+            print("Region".ljust(30) + "Failed to get info.")
         print("Forwarding".ljust(30) + f"http://localhost:{port} -> http://{server.split('@')[-1]}:{porta_alocada}")
+        print("")
+        print("")
+        print("")
+        print("(CTRL + C to quit)")
     else:
-        print("Porta não encontrada.")
+        print("Conexão não estabelecida.")
         process.terminate()
 
     process.wait()
