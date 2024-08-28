@@ -30,7 +30,7 @@ def main():
 
     porta_alocada = None
     for line in iter(process.stdout.readline, b''):
-        match = re.search(r"Allocated port (\d+) for remote forward to localhost:80", line.decode('utf-8'))
+        match = re.search(r"Allocated port (\d+) for remote forward to localhost:\d+", line.decode('utf-8'))
         if match:
             porta_alocada = int(match.group(1))
             break
