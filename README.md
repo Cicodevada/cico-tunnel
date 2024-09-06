@@ -64,9 +64,9 @@ Para usar o Cico Tunnel, siga estas etapas:
 
 Sinta-se à vontade para contribuir com o projeto! Você pode fazer isso de várias maneiras:
 
-- **Dar Estrelas**: Se você gostou do Cicotunnel e acha que ele é útil, considere dar uma estrela ⭐ no [repositório](https://github.com/hugosantoslisboa/cico-tunnel). Isso ajuda a apoiar o projeto e mostra que você aprecia o trabalho!
+- **Dar Estrelas**: Se você gostou do Cicotunnel e acha que ele é útil, considere dar uma estrela ⭐ no [repositório](https://github.com/cicodevada/cico-tunnel). Isso ajuda a apoiar o projeto e mostra que você aprecia o trabalho!
 
-- **Relatar Problemas**: Se você encontrar algum problema ou bug, por favor, abra uma [issue](https://github.com/hugosantoslisboa/cico-tunnel/issues) no repositório.
+- **Relatar Problemas**: Se você encontrar algum problema ou bug, por favor, abra uma [issue](https://github.com/cicodevada/cico-tunnel/issues) no repositório.
 
 - **Enviar Pull Requests**: Se você tem melhorias ou correções, envie um pull request para o repositório.
 

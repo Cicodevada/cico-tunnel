@@ -45,8 +45,8 @@ def main():
 \___/_/\__/\___/   /_/  \_,_/_//_/_//_/\__/_/  
                                                
 """)
-        link_text = "hugosantoslisboa"
-        url = "https://github.com/hugosantoslisboa"
+        link_text = "cicodevada"
+        url = "https://github.com/cicodevada"
 
         print(Fore.CYAN + "CicoTunnel" + Style.RESET_ALL + " by " + Fore.CYAN + f"\033]8;;{url}\033\\{link_text}\033]8;;\033\\".ljust(30)+ Style.RESET_ALL)
         print("")
